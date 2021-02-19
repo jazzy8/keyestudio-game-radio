@@ -55,4 +55,14 @@ basic.forever(function () {
     } else {
         radio.sendValue("yy", 0)
     }
+    if (pins.digitalReadPin(DigitalPin.P6) == 0) {
+        radio.sendValue("md", 1)
+    } else {
+        radio.sendValue("md", 0)
+    }
+    if (pins.digitalReadPin(DigitalPin.P7) == 0) {
+        radio.sendValue("sl", 1)
+    } else {
+        radio.sendValue("sl", 0)
+    }
 })
